@@ -47,15 +47,16 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geoj
     let features = data.features;
     if (features) {
         features.forEach(function (feature) {
-            if (feature && feature.geometry && feature.geometry && feature.properties) {
-
+            if (feature && feature.geometry && feature.properties) {
                 let coordinates = feature.geometry.coordinates.splice(0, 2).reverse();
                 let magnitude = feature.properties.mag;
                 let place = feature.properties.place;
                 let type = feature.properties.type;
-                let date = new Date(feature.properties.time).toLocaleString();
+                let eventDate = new Date(feature.properties.time).toLocaleString();
+                let updateDate = new Date(feature.properties.updated).toLocaleString();
                 let url = feature.properties.url;
-                let status = feature.properties.status
+                let status = feature.properties.status;
+                let alert = feature.properties.alert || 'N/A';
 
                 L.circle(coordinates, {
                     opacity: 1,
@@ -69,8 +70,10 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geoj
                     `<h4><a href="${url}" target="_blank">${place}</a></h4>\
                     <p><b>Type:</b> ${type}<br>\
                     <b>Maginitude:</b> ${magnitude}<br>\
-                    <b>Time:</b> ${date}<br>\
-                    <b>Status:</b> ${status}</p>`
+                    <b>Event Date:</b> ${eventDate}<br>\
+                    <b>Update Date:</b> ${updateDate}<br>\
+                    <b>Status:</b> ${status}<br>\
+                    <b>Alert:</b><span style="color:${alert}"> ${alert}</span></p>`
                     ).addTo(myMap);
             
             }
