@@ -45,7 +45,7 @@ legend.addTo(myMap);
 
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_week.geojson", function (data) {
     let features = data.features;
-    if (features && features.size > 0) {
+    if (features) {
         features.forEach(function (feature) {
             if (feature && feature.geometry && feature.geometry && feature.properties) {
 
