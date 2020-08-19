@@ -22,6 +22,8 @@ The following outlines the steps.
 
    * A legend provides context for map data.
    
+   - - -
+   
 ### Screenshot
 
 ![Screenshot](Images/screenshot_leaflet.png)
