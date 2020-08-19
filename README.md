@@ -10,6 +10,8 @@ The following outlines the steps.
    
    Pulled past 7 days' data from [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) in JSON format for visualization.
 
+- - -
+
 ### Step 2 - Import & Visualize the Data
 
    Created a map using Leaflet that plots all of the earthquakes from data set based on their longitude and latitude.
