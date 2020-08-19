@@ -17,3 +17,8 @@ The following outlines the steps.
    * Popups are used to provide additional information about the earthquake when a marker is clicked.
 
    * A legend provides context for map data.
+   
+### Screenshot
+
+![Screenshot](Images/screenshot_leaflet.png)
+
