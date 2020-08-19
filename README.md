@@ -2,6 +2,8 @@
 
 This is a web tool to visualize earthquake data available from the United States Geological Survey (USGS). The USGS is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment; and the impacts of climate and land-use change.
 
+https://alapsraval.github.io/leaflet-data-visualization/
+
 The following outlines the steps.
 
 ### Step 1 - Pull JSON data
